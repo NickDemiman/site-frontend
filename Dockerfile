@@ -1,5 +1,5 @@
 FROM node:latest
-WORKDIR /frontend
+WORKDIR /site-frontend
 COPY . .
 RUN npm run build
 CMD ["npm", "start"]

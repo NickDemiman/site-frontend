@@ -1,18 +1,7 @@
-import {
-    Avatar,
-    Tooltip,
-    Box,
-    IconButton,
-    Typography,
-    Menu,
-    MenuItem,
-    Button
-} from '@mui/material'
+import { Tooltip, Box, IconButton, Menu, MenuItem, } from '@mui/material'
 import * as React from 'react';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Link } from 'react-router-dom';
-
-const settings = ['Личный кабинет', 'Материалы', 'Выйти'];
 
 function UserToolbar () {
     const [anchorElUser, setAnchorElUser] = React.useState(null);

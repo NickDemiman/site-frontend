@@ -4,7 +4,6 @@ import {
     TableContainer,
     Paper,
     Table,
-    TableHead,
     TableBody,
     TableRow,
     TableCell,
@@ -37,10 +36,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   }));
 
  class CFP extends Component {
-    constructor (){
-        super();
-    };
-
     state = {
         sections: []
     }
@@ -63,12 +58,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
     
             <TableContainer component={Paper} sx={{my:1}}>
             <Table sx={{ minWidth: 300 }} aria-label="customized table">
-            <TableHead>
-                <TableRow>
-                    <StyledTableCell align='center'></StyledTableCell>
-                    <StyledTableCell align="left"></StyledTableCell>
-                </TableRow>
-            </TableHead>
             <TableBody>
                 {this.state.sections.map((section,index) => 
                     <StyledTableRow>

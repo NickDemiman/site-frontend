@@ -1,6 +1,6 @@
 import './App.css';
 import {Route, Routes, BrowserRouter} from "react-router-dom";
-import {Navbar} from './Components/Navbar';
+import {Navbar} from './Components/Navbar/Navbar';
 
 // import Home from './Pages/Home'
 import Home from './Pages/Home'
@@ -12,10 +12,13 @@ import { Venue } from './Pages/Venue';
 import {Registration} from './Pages/Registration'
 import LastConf from './Pages/LastConf'
 import NotFound from './Pages/NotFound'
+import { ThemeProvider } from '@mui/material/styles';
+import {theme} from './style'
 
 export default function App() {
   return (
     <>
+    <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Navbar/>
         <Routes>
@@ -30,6 +33,7 @@ export default function App() {
           <Route path='*' element={<NotFound/>}/>
         </Routes>
       </BrowserRouter>
+      </ThemeProvider>
     </>
   );
 }

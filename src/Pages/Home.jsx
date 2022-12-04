@@ -1,5 +1,5 @@
 import { Container } from '@mui/system';
-import { Typography, Card, CardActionArea, CardContent } from '@mui/material';
+import { Typography, Card, CardActionArea, CardContent, Box } from '@mui/material';
 import {blue} from '@mui/material/colors'
 import Background from '../static/img/bg.jpg'
 
@@ -20,7 +20,7 @@ const color = blue[100]
 
 export default function Home () {
     return (
-        <>
+        <Box>
             <section style={sectionStyle}>
                 <Card color={color} elevation={10} sx={{
                     maxWidth: 345,
@@ -37,7 +37,7 @@ export default function Home () {
                 </Card>
             </section>
             <section>
-                <Container sx={{
+                <Container color="primary" sx={{
                     marginTop: 4,
                 }}>
                     <div sx={{ marginTop: 2 }}>
@@ -60,6 +60,6 @@ export default function Home () {
                     </div>
                 </Container>
             </section>
-        </>
+        </Box>
     );
 }
